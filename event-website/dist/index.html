@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Talks Event</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-filter {
+    margin-bottom: 20px;
+}
+
+#categorySearch {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.talk-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.talk-item.lunch-break {
+    background-color: #dff0d8;
+    text-align: center;
+    font-weight: bold;
+}
+
+.talk-item h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.talk-item p {
+    margin: 5px 0;
+}
+
+.talk-item .speakers {
+    font-style: italic;
+    color: #555;
+}
+
+.talk-item .category {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.talk-item .time {
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.talk-item.hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Technical Talks Event</h1>
+        <p>A day of insightful technical discussions.</p>
+    </header>
+    <main>
+        <section class="schedule-filter">
+            <input type="text" id="categorySearch" placeholder="Search by category...">
+        </section>
+        <section class="schedule">
+            <h2>Event Schedule</h2>
+            <div id="talkList">
+                
+            <div class="talk-item">
+                <p class="time">10:00 AM - 11:00 AM</p>
+                <h3>The Future of AI in Software Development</h3>
+                <p class="speakers">Speakers: Dr. Alice Smith</p>
+                <p class="category">Category: AI, Software Development</p>
+                <p class="description">An insightful look into how artificial intelligence is transforming the software development lifecycle, from automated code generation to intelligent debugging.</p>
+            </div>
+            <div class="talk-item">
+                <p class="time">11:10 AM - 12:10 PM</p>
+                <h3>Mastering Modern JavaScript Frameworks</h3>
+                <p class="speakers">Speakers: Bob Johnson, Carol White</p>
+                <p class="category">Category: JavaScript, Frontend</p>
+                <p class="description">A deep dive into the latest features and best practices for popular JavaScript frameworks like React, Vue, and Angular.</p>
+            </div>
+            <div class="talk-item">
+                <p class="time">12:20 PM - 01:20 PM</p>
+                <h3>Secure Coding Practices for Web Applications</h3>
+                <p class="speakers">Speakers: David Green</p>
+                <p class="category">Category: Security, Web Development</p>
+                <p class="description">Learn essential secure coding techniques and common vulnerabilities to protect your web applications from cyber threats.</p>
+            </div>
+                <div class="talk-item lunch-break">
+                    <p class="time">01:30 PM - 02:30 PM</p>
+                    <h3>LUNCH BREAK</h3>
+                </div>
+            <div class="talk-item">
+                <p class="time">02:30 PM - 03:30 PM</p>
+                <h3>Cloud Native Architectures with Kubernetes</h3>
+                <p class="speakers">Speakers: Eve Black</p>
+                <p class="category">Category: Cloud, DevOps, Kubernetes</p>
+                <p class="description">Explore the principles of cloud-native development and how Kubernetes can help you build scalable and resilient applications.</p>
+            </div>
+            <div class="talk-item">
+                <p class="time">03:40 PM - 04:40 PM</p>
+                <h3>Data Science for Developers: A Practical Approach</h3>
+                <p class="speakers">Speakers: Frank Brown</p>
+                <p class="category">Category: Data Science, Python</p>
+                <p class="description">An introduction to data science concepts and tools, tailored for software developers looking to integrate data analytics into their projects.</p>
+            </div>
+            <div class="talk-item">
+                <p class="time">04:50 PM - 05:50 PM</p>
+                <h3>Optimizing Database Performance</h3>
+                <p class="speakers">Speakers: Grace Lee</p>
+                <p class="category">Category: Databases, Performance</p>
+                <p class="description">Strategies and tips for improving the performance of your relational and NoSQL databases, ensuring fast and efficient data access.</p>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Technical Talks Event</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('categorySearch');
+    const talkList = document.getElementById('talkList');
+
+    if (searchInput && talkList) {
+        searchInput.addEventListener('keyup', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+            const talkItems = talkList.querySelectorAll('.talk-item:not(.lunch-break)'); // Exclude lunch break
+
+            talkItems.forEach(item => {
+                const categoryElement = item.querySelector('.category');
+                if (categoryElement) {
+                    const categories = categoryElement.textContent.toLowerCase();
+                    if (categories.includes(searchTerm)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

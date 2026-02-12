@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The Future of AI in Software Development",
+    "speakers": ["Dr. Alice Smith"],
+    "category": ["AI", "Software Development"],
+    "description": "An insightful look into how artificial intelligence is transforming the software development lifecycle, from automated code generation to intelligent debugging.",
+    "duration": "1 hour"
+  },
+  {
+    "title": "Mastering Modern JavaScript Frameworks",
+    "speakers": ["Bob Johnson", "Carol White"],
+    "category": ["JavaScript", "Frontend"],
+    "description": "A deep dive into the latest features and best practices for popular JavaScript frameworks like React, Vue, and Angular.",
+    "duration": "1 hour"
+  },
+  {
+    "title": "Secure Coding Practices for Web Applications",
+    "speakers": ["David Green"],
+    "category": ["Security", "Web Development"],
+    "description": "Learn essential secure coding techniques and common vulnerabilities to protect your web applications from cyber threats.",
+    "duration": "1 hour"
+  },
+  {
+    "title": "Cloud Native Architectures with Kubernetes",
+    "speakers": ["Eve Black"],
+    "category": ["Cloud", "DevOps", "Kubernetes"],
+    "description": "Explore the principles of cloud-native development and how Kubernetes can help you build scalable and resilient applications.",
+    "duration": "1 hour"
+  },
+  {
+    "title": "Data Science for Developers: A Practical Approach",
+    "speakers": ["Frank Brown"],
+    "category": ["Data Science", "Python"],
+    "description": "An introduction to data science concepts and tools, tailored for software developers looking to integrate data analytics into their projects.",
+    "duration": "1 hour"
+  },
+  {
+    "title": "Optimizing Database Performance",
+    "speakers": ["Grace Lee"],
+    "category": ["Databases", "Performance"],
+    "description": "Strategies and tips for improving the performance of your relational and NoSQL databases, ensuring fast and efficient data access.",
+    "duration": "1 hour"
+  }
+]
